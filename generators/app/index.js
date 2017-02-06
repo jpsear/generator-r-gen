@@ -61,12 +61,10 @@ module.exports = Generator.extend({
 
     return this.prompt(prompts).then(props => {
       this.data = props
-      // this.props = props;
     });
   },
 
   writing: function () {
-    console.log(this.data);
     let path;
 
     if (this.data.folder) {
@@ -76,9 +74,6 @@ module.exports = Generator.extend({
     if (!this.data.folder) {
       path = `${this.data.path}/${this.data.name}.js`
     }
-
-    let template
-    // if (this.data.cssModules === 'yep')
 
     this.fs.copyTpl(
       this.templatePath('Component.js'),
