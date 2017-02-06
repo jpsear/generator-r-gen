@@ -10,7 +10,7 @@ npm install -g yo
 npm install -g generator-r-gen 
 ```
 
-Then start generating React goodies!:
+Then start generating React goodies!
 
 ```bash
 yo r-gen
