@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 <% if (component.observer) { -%>
-import { observer } from 'react-mobx'
+import { observer } from 'mobx-react'
 <% } -%>
 <% if (component.cssModules) { -%>
 import CSSModules from 'react-css-modules'
