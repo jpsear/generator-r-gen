@@ -1,4 +1,5 @@
 const Generator = require('yeoman-generator')
+const utils = require('../../utils')
 
 module.exports = class extends Generator {
   constructor(args, opts) {
@@ -61,17 +62,14 @@ module.exports = class extends Generator {
     let path;
 
     if (this.data.folder) {
-      path = `${this.data.path}/${this.data.name}/${this.data.name}.js`
+      path = `${this.data.path}/${this.data.name}/${this.data.name}`
     }
 
     if (!this.data.folder) {
-      path = `${this.data.path}/${this.data.name}.js`
+      path = `${this.data.path}/${this.data.name}`
     }
 
-    this.fs.copyTpl(
-      this.templatePath('Store.js'),
-      this.destinationPath(path),
-      { store: this.data }
-    )
+    utils.copyTemplate('Store', path, 'js', this, this.data)
+    this.log(`\n\n\n 🙌  ${this.data.name} created -> ${path} 🙌 \n\n\n`)
   }
 }

@@ -1,6 +1,6 @@
 import { observable, computed } from 'mobx'
 
-class <%= store.name %> {
+class <%= data.name %> {
 	@observable data = {
     val: true
   }
@@ -10,5 +10,5 @@ class <%= store.name %> {
   }
 }
 
-const <%= store.name %>Store = new <%= store.name %>()
-export default <%= store.name %>Store
+const <%= data.name %>Store = new <%= data.name %>()
+export default <%= data.name %>Store

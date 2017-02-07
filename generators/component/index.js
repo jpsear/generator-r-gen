@@ -1,4 +1,5 @@
 const Generator = require('yeoman-generator')
+const utils = require('../../utils')
 
 module.exports = class extends Generator {
   constructor(args, opts) {
@@ -164,19 +165,10 @@ module.exports = class extends Generator {
     }
 
     if (this.data.scss) {
-      this._copyTemplate('Component', path, 'scss')
+      utils.copyTemplate('Component', path, 'scss', this)
     }
 
-    this._copyTemplate('Component', path, 'js', this.data)
-
+    utils.copyTemplate('Component', path, 'js', this, this.data)
     this.log(`\n\n\n 🙌  ${this.data.name} created -> ${path} 🙌 \n\n\n`)
-  }
-
-  _copyTemplate(template, path, extension, data = {}) {
-    return this.fs.copyTpl(
-      this.templatePath(`${template}.${extension}`),
-      this.destinationPath(`${path}.${extension}`),
-      { data }
-    )
   }
 };
