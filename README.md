@@ -1,7 +1,7 @@
 # r-gen
 > Generate React goodies with ease
 
-![Gif of r-gen in action](http://i.imgur.com/ogxAc2R.gifv)
+![Gif of r-gen in action](http://i.imgur.com/ogxAc2R.gif)
 
 ## Installation
 
