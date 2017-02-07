@@ -1,36 +1,40 @@
 import React, { Component } from 'react'
-<% if (component.observer) { -%>
+<% if (data.observer) { -%>
 import { observer } from 'mobx-react'
 <% } -%>
-<% if (component.cssModules) { -%>
+<% if (data.cssModules) { -%>
 import CSSModules from 'react-css-modules'
-import s from './<%= component.name %>.scss'
+import s from './<%= data.name %>.scss'
 <% } -%>
 
-<% if (component.observer) { -%>
+<% if (data.observer) { -%>
 @observer
 <% } -%>
-<% if (component.cssModules) { -%>
+<% if (data.cssModules) { -%>
 @CSSModules(s)
 <% } -%>
-class <%= component.name %> extends Component {
+class <%= data.name %> extends Component {
   render() {
     return (
+<% if (data.cssModules) { -%>
+      <div styleName="wrapper">
+<% } else { -%>
       <div>
+<% } -%>
         Hi.
       </div>
     );
   }
 }
 
-<% if (component.propTypes) { -%>
-<%= component.name %>.propTypes = {
+<% if (data.propTypes) { -%>
+<%= data.name %>.propTypes = {
 
 }
 
-<%= component.name %>.defaultProps = {
+<%= data.name %>.defaultProps = {
   
 }
 <% } -%>
 
-export default <%= component.name %>
+export default <%= data.name %>

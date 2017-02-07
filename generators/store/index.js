@@ -1,10 +1,11 @@
-const Generator = require('yeoman-generator');
+const Generator = require('yeoman-generator')
 
 module.exports = class extends Generator {
   constructor(args, opts) {
-    super(args, opts);
+    super(args, opts)
 
     this.option('folder')
+    
     this.data = {}
     this.prompts = []
   }
@@ -52,7 +53,7 @@ module.exports = class extends Generator {
     this.promptPath()
 
     return this.prompt(this.prompts).then(props => {
-      this.data = Object.assign({}, props);
+      this.data = Object.assign({}, props)
     });
   }
 
