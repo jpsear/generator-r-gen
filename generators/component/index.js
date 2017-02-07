@@ -147,7 +147,7 @@ module.exports = class extends Generator {
 
     return this.prompt(this.prompts).then(props => {
       console.log(props);
-      this.data = Object.assign({}, props)
+      this.data = Object.assign(this.data, props)
       console.log(this.data);
     });
   }
