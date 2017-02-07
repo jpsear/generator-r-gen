@@ -1,6 +1,8 @@
 # r-gen
 > Generate React goodies with ease
 
+![Gif of r-gen in action](http://i.imgur.com/ogxAc2R.gifv)
+
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-r-gen using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
