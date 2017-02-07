@@ -1,6 +1,6 @@
 {
   "name": "generator-r-gen",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Generate React goodies",
   "homepage": "",
   "author": {
@@ -44,7 +44,7 @@
       "mocha": true
     }
   },
-  "repository": "jpsear/generator-r-gen",
+  "repository": "https://github.com/jpsear/generator-r-gen",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
